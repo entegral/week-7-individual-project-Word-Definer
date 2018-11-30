@@ -10,6 +10,17 @@ get '/' do
   erb(:index)
 end
 
+get '/sort_alphabetically' do
+  Word.sort_alphabetically
+  redirect '/'
+  erb(:index)
+end
+
+get '/sort_id' do
+  Word.sort_id
+  redirect '/'
+end
+
 post '/' do
   word = Word.new(params)
   word.save

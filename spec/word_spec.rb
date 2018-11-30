@@ -56,4 +56,14 @@ describe('Word') do
     end
   end
 
+  describe('.sort_switching') do
+    it('checks that the list of words is sorted alphabetically, then changed back to ordered by id') do
+      expect(Word.all).to(eq([@dummy, @dummy2]))
+      Word.sort_alphabetically
+      expect(Word.all).to(eq([@dummy2, @dummy]))
+      Word.sort_id
+      expect(Word.all).to(eq([@dummy, @dummy2]))
+    end
+  end
+
 end

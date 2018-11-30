@@ -21,15 +21,15 @@ _This application focuses on using a Word class. The homepage of this app displa
 
 - [x] Sinatra application uses views, instance variables and forms.
 - [x] Sinatra routes process GET and POST requests/responses.
-- [ ] Project includes thorough and passing integration specs.
+- [x] Project includes thorough and passing integration specs.
 - [ ] Application is deployed to Heroku (Include the link in your README).
 - [x] Project demonstrates a thorough understanding of this weeks concepts. If prompted, you can discuss your with an instructor using correct terminology.
 - [x] Project is in a polished, portfolio-quality state.
 - [x] Required functionality was present by the end of class on Friday
 
 - [x] Objects are created from a custom class with custom methods.
-- [ ] Specs have complete coverage for the behaviors that need to be tested.
-- [ ] All specs are passing.
+- [x] Specs have complete coverage for the behaviors that need to be tested.
+- [x] All specs are passing.
 - [x] Logic is easy to understand.
 - [x] Code has proper indentation and spacing.
 - [x] Variable names are descriptive.
@@ -38,8 +38,8 @@ _This application focuses on using a Word class. The homepage of this app displa
 ## Bonus Objectives
 
 - [x] Make the site kid-friendly! It's up to you to decide what that means.
-- [ ] Add a property to each Word that allows kids to link a picture.
-- [ ] Allow kids to sort Words alphabetically.
+- [x] Add a property to each Word that allows kids to link a picture.
+- [x] Allow kids to sort Words alphabetically.
 - [ ] Allow kids to search for a particular Word in your application.
 - [ ] Include a page where kids can view all Words and their corresponding Definitions in one list.
 - [ ] Include a randomizer method where kids can click a button and randomly look at a Word
