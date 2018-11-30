@@ -18,6 +18,7 @@ class Word
     for each in @@word_list
       if each.id == id.to_i
         return each
+      end
     end
     "Word ID not found in word list."
   end
