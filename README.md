@@ -17,23 +17,23 @@ _This application focuses on using a Word class. The homepage of this app displa
 
 ## Learning Objectives
 
-- [ ] Objects are created from a custom class with custom methods.
+- [x] Objects are created from a custom class with custom methods.
 - [ ] Specs have complete coverage for the behaviors that need to be tested.
-- [ ] All specs are passing.
-- [ ] Logic is easy to understand.
-- [ ] Code has proper indentation and spacing.
-- [ ] Variable names are descriptive.
-- [ ] Good Git documentation
+- [x] All specs are passing.
+- [x] Logic is easy to understand.
+- [x] Code has proper indentation and spacing.
+- [x] Variable names are descriptive.
+- [x] Good Git documentation
 
 ### Grading Criteria
 
-- [ ] Sinatra application uses views, instance variables and forms.
-- [ ] Sinatra routes process GET and POST requests/responses.
+- [x] Sinatra application uses views, instance variables and forms.
+- [x] Sinatra routes process GET and POST requests/responses.
 - [ ] Project includes thorough and passing integration specs.
 - [ ] Application is deployed to Heroku (Include the link in your README).
-- [ ] Project demonstrates a thorough understanding of this weeks concepts. If prompted, you can discuss your with an instructor using correct terminology.
-- [ ] Project is in a polished, portfolio-quality state.
-- [ ] Required functionality was present by the end of class on Friday
+- [x] Project demonstrates a thorough understanding of this weeks concepts. If prompted, you can discuss your with an instructor using correct terminology.
+- [x] Project is in a polished, portfolio-quality state.
+- [x] Required functionality was present by the end of class on Friday
 
 ## Bonus Objectives
 
