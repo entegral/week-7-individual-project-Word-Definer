@@ -42,7 +42,7 @@
     <div class="col-6">
       <div class="card">
         <% unless @word.image_link == nil %>
-          <img class="card-img-top" src="<%= @word.image_link %>" alt="Card image cap">
+          <img class="card-img-top" src="<%= @word.image_link %>" alt="Card image">
         <% end %>
 
         <div class="card-body">
@@ -62,7 +62,7 @@
             <div class="form-group">
               <input type="text" class="form-control" name="image_link" placeholder="(Optional) Copy/Paste Image URL here">
             </div>
-            <button type="submit" class="btn btn-primary" name="button">Add Definition to Word</button>
+            <button type="submit" class="btn btn-primary" name="button">Update Word</button>
           </form>        </div>
       </div>
     </div>

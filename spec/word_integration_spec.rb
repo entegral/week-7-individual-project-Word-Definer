@@ -28,11 +28,10 @@ describe('Word', {:type => :feature}) do
     it('checks whether additional definitions added to word appear on detail card') do
       visit('/word/1')
       fill_in('add_definition', :with => 'prove new def is added to word')
-      click_button('Add Definition to Word')
+      click_button('Update Word')
       expect(page).to have_content('prove new def is added to word')
     end
   end
-
 
 
 end
