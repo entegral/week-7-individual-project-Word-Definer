@@ -1,44 +1,63 @@
 
+<br>
 <div class="row">
-  <% if @list.kind_of?(Array) %>
-  <h2>Definer Word List</h2>
-    <% @list.each do |each| %>
-      <a href="/word/<%= each.id %>"> <p><%= each.name %></a></p>
-    <% end %>
-  <% else %>
-  <div class="row">
-    <br>
-    <a href="/"><< Return to Word List</a>
-  </div>
-    <h2><%= @list.name %></h2>
-    <ul>
-      <li>Definitions:<ul>
-        <% @list.definitions.each do |i| %>
-          <li><%= i %></li>
-        <% end %>
-      </ul></li>
-    </ul>
-  <% end %>
-</div>
 
-<% if @list.kind_of?(Array) %>
-  <div class="row">
-    <form action="/" method="post">
-      <div class="form-group">
-        <input type="text" name="name" placeholder="Add New Word">
-      </div>
-      <div class="form-group">
-        <input type="text" name="definition" placeholder="Definition">
-      </div>
-      <button type="submit" name="button">Add Word to List</button>
-    </form>
-  </div>
-<% else %>
-<div class="row">
-  <form action="/word/<%= @list.id %>" method="post">
-    <div class="form-group">
-      <input type="text" name="definition" placeholder="Add Definition">
+  <div class="col-3">
+    <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Add New Words</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Enter a word and a definition to be added to the list.</h6>
+      <form action="/" method="post">
+        <div class="form-group">
+          <input class="form-control" type="text" name="name" placeholder="Add New Word">
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="text" name="definition" placeholder="Definition">
+        </div>
+        <button type="submit" class="btn btn-primary" name="button">Add Word to List</button>
+      </form>
     </div>
-    <button type="submit" name="button">Add Definition to Word</button>
-  </form>
-<% end %>
+</div>
+  </div>
+
+  <% if @list.length > 0 %>
+
+    <div class="col-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Current Word List</h5>
+          <p class="card-text">
+            <% @list.each do |each| %>
+              <a href="/word/<%= each.id %>"> <p><%= each.name %></a></p>
+            <% end %>
+          </p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+
+  <% if @word %>
+
+    <div class="col-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><%= @word.name %></h5>
+          <h6 class="card-subtitle mb-2 text-muted">Definitions</h6>
+          <p class="card-text">
+            <ul>
+              <% @word.definitions.each do |each| %>
+                <li><%= each %></li>
+              <% end %>
+            </ul>
+          </p>
+          <form action="/word/<%= @word.id %>" method="post">
+            <div class="form-group">
+              <input type="text" class="form-control" name="definition" placeholder="Add Definition">
+            </div>
+            <button type="submit" class="btn btn-primary" name="button">Add Definition to Word</button>
+          </form>        </div>
+      </div>
+    </div>
+
+  <% end %>
