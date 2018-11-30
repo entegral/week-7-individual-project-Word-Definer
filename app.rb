@@ -27,7 +27,7 @@ post '/word/:id' do
   @list = Word.all
   word = Word.find(params['id'])
 
-  unless params['definition'] == ""
+  unless params['add_definition'] == ""
     word.add_definition(params)
   end
 

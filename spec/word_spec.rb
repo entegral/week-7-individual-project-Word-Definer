@@ -43,9 +43,16 @@ describe('Word') do
 
   describe('#add_definition') do
     it('checks a definition added to a word is added to the word\'s array') do
-      add_def = { :definition => "able to withstand great force or pressure" }
+      add_def = { :add_definition => "able to withstand great force or pressure" }
       @dummy.add_definition(add_def)
       expect(@dummy.definitions[-1]).to(eq("able to withstand great force or pressure"))
+    end
+  end
+
+  describe('#image_link') do
+    it('checks that a word found by id is returned correctly') do
+      @dummy.image_link = "https://pbs.twimg.com/media/DczcImiVAAEn778.jpg"
+      expect(@dummy.image_link).to(eq("https://pbs.twimg.com/media/DczcImiVAAEn778.jpg"))
     end
   end
 

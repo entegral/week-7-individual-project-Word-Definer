@@ -17,14 +17,6 @@ _This application focuses on using a Word class. The homepage of this app displa
 
 ## Learning Objectives
 
-- [x] Objects are created from a custom class with custom methods.
-- [ ] Specs have complete coverage for the behaviors that need to be tested.
-- [x] All specs are passing.
-- [x] Logic is easy to understand.
-- [x] Code has proper indentation and spacing.
-- [x] Variable names are descriptive.
-- [x] Good Git documentation
-
 ### Grading Criteria
 
 - [x] Sinatra application uses views, instance variables and forms.
@@ -35,9 +27,17 @@ _This application focuses on using a Word class. The homepage of this app displa
 - [x] Project is in a polished, portfolio-quality state.
 - [x] Required functionality was present by the end of class on Friday
 
+- [x] Objects are created from a custom class with custom methods.
+- [ ] Specs have complete coverage for the behaviors that need to be tested.
+- [ ] All specs are passing.
+- [x] Logic is easy to understand.
+- [x] Code has proper indentation and spacing.
+- [x] Variable names are descriptive.
+- [x] Good Git documentation
+
 ## Bonus Objectives
 
-- [ ] Make the site kid-friendly! It's up to you to decide what that means.
+- [x] Make the site kid-friendly! It's up to you to decide what that means.
 - [ ] Add a property to each Word that allows kids to link a picture.
 - [ ] Allow kids to sort Words alphabetically.
 - [ ] Allow kids to search for a particular Word in your application.

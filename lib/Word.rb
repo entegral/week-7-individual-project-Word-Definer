@@ -31,7 +31,12 @@ class Word
 
 
   def add_definition(attributes)
-    @definitions.push(attributes[:definition])
+    unless attributes[:definition] == ""
+      @definitions.push(attributes[:definition])
+    end
+    unless attributes[:definition] == ""
+      @definitions.push(attributes[:add_definition])
+    end
   end
 
 
