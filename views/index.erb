@@ -1,0 +1,18 @@
+<h1>List of things:</h1>
+<ul>
+  <% if @list.kind_of?(Array) %>
+    <% @list.each do |each| %>
+      <p class="home" id='<%= each.id %>'><a href='/details/<%= each.id %>'><%= each.name %></a></p>
+    <% end %>
+  <% else %>
+    <p class="home" id='<%= @list.id %>'><a href='/details/<%= @list.id %>'><%= @list.name %></a></p>
+  <% end %>
+</ul>
+
+
+<form action="/" method="post">
+  <div class="form-group">
+    <input type="text" name="name" placeholder="Name your new Cat">
+  </div>
+  <button type="submit" name="button">Add your new cat</button>
+</form>

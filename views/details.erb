@@ -1,0 +1,62 @@
+<h1>Life of <%=  @cat.name %></h1>
+
+<div class="images">
+  <% if @cat.check_alive %>
+    <% if @cat.hunger_level > 15%>
+      <img src="/img/hungry.jpg" alt="hungrycat">
+
+    <% elsif @cat.judgement_level > 12 %>
+      <img src="/img/judgement.jpg" alt="SMACKIT">
+
+    <% elsif @cat.sass_level > 10 %>
+      <img src="/img/smack.gif" alt="SMACKIT">
+
+      <% else %>
+        <img src="/img/lilbub.gif" alt="lilbub">
+
+      <% end %>
+
+  <% else %>
+    <img src="/img/deadcat.jpeg" alt="deadcat">
+  <% end %>
+</div>
+
+<div class="row">
+
+  <div class="col-md-3">
+    <p>Hunger: <%= @cat.hunger_level %></p>
+    <form class="" action="/feed/<%= @cat.id %>" method="post">
+      <button type="submit" name="button" class="btn btn-success"> Feed <%= @cat.name %></button>
+    </form>
+  </div>
+
+
+  <div class="col-md-3">
+    <p>Sass: <%= @cat.sass_level %></p>
+    <form class="" action="/pet/<%= @cat.id %>" method="post">
+      <button type="submit" name="button" class="btn btn-success"> Pet <%= @cat.name %></button>
+    </form>
+  </div>
+
+  <div class="col-md-3">
+    <p>Judgement: <%= @cat.judgement_level %></p>
+    <form class="" action="/smack/<%= @cat.id %>" method="post">
+      <input class="hidden" type="text" name="smack">
+      <button type="submit" name="button" class="btn btn-danger"> SMACK <%= @cat.name %></button>
+    </form>
+  </div>
+
+  <div class="col-md-3">
+    <p>Energy: <%= @cat.energy_level %></p>
+    <form class="" action="/activities/<%= @cat.id %>" method="post">
+      <select class="" name="activities">
+        <option value="catnip">Dose of Catnip</option>
+        <option value="laserpointer">Laser pointer</option>
+        <option value="nap">Knock out</option>
+      </select>
+      <button type="submit" name="button" class="btn"> Start Activity</button>
+    </form>
+  </div>
+
+</div>
+<a href="/">Return to Cat Box</a>
