@@ -16,3 +16,15 @@ post '/' do
   @list = Word.all
   erb(:index)
 end
+
+get '/word/:id' do
+  @list = Word.find(params['id'])
+  erb(:index)
+end
+
+post '/word/:id' do
+  word = Word.find(params['id'])
+  word.add_definition(params)
+  @list = Word.find(params['id'])
+  erb(:index)
+end

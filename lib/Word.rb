@@ -1,4 +1,5 @@
 class Word
+  attr_reader :id, :name, :definitions
   @@word_list = []
 
   def initialize(attributes)
@@ -11,6 +12,10 @@ class Word
 
   def self.all
     @@word_list
+  end
+
+  def self.clear
+    @@word_list = []
   end
 
 
