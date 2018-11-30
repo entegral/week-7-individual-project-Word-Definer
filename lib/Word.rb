@@ -31,10 +31,10 @@ class Word
 
 
   def add_definition(attributes)
-    unless attributes[:definition] == ""
+    unless attributes[:definition] == nil
       @definitions.push(attributes[:definition])
     end
-    unless attributes[:definition] == ""
+    unless attributes[:add_definition] == nil
       @definitions.push(attributes[:add_definition])
     end
   end
