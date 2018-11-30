@@ -53,37 +53,16 @@
 
       </div>
     </div>
-  <% end %>
 
-  <% if @word %>
 
     <div class="col-6">
       <div class="card">
-        <% unless @word.image_link == nil %>
-          <img class="card-img-top" src="<%= @word.image_link %>" alt="Card image">
-        <% end %>
 
         <div class="card-body">
-          <h5 class="card-title"><%= @word.name.titlecase %></h5>
-          <h6 class="card-subtitle mb-2 text-muted">Definitions</h6>
-          <p class="card-text">
-            <ul>
-              <% @word.definitions.each do |each| %>
-                <li><%= each %></li>
-              <% end %>
-            </ul>
-          </p>
-          <form action="/word/<%= @word.id %>" method="post">
-            <div class="form-group">
-              <input type="text" class="form-control" name="add_definition" placeholder="Add Definition">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" name="image_link" placeholder="(Optional) Copy/Paste Image URL here">
-            </div>
-            <button type="submit" class="btn btn-primary" name="button">Update Word</button>
-          </form>
+          <h5 class="card-title"><%= @search_word%> Not Found</h5>
+
         </div>
       </div>
     </div>
 
-  <% end %>
+    <% end %>

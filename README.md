@@ -40,7 +40,8 @@ _This application focuses on using a Word class. The homepage of this app displa
 - [x] Make the site kid-friendly! It's up to you to decide what that means.
 - [x] Add a property to each Word that allows kids to link a picture.
 - [x] Allow kids to sort Words alphabetically.
-- [ ] Allow kids to search for a particular Word in your application.
+- [x] Allow kids to search for a particular Word in your application.
+- [x] Search feature returns error page if search result is not in the list.
 - [ ] Include a page where kids can view all Words and their corresponding Definitions in one list.
 - [ ] Include a randomizer method where kids can click a button and randomly look at a Word
 

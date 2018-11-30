@@ -21,6 +21,16 @@ get '/sort_id' do
   redirect '/'
 end
 
+get '/search' do
+  @list = Word.all
+  @word = Word.find_by_name(params['search'])
+  unless @word
+    @search_word = params['search']
+    return erb(:not_found)
+  end
+  erb(:index)
+end
+
 post '/' do
   word = Word.new(params)
   word.save

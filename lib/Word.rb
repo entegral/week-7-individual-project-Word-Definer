@@ -36,7 +36,16 @@ class Word
         return each
       end
     end
-    "Word ID not found in word list."
+    false
+  end
+
+  def self.find_by_name(name)
+    for each in @@word_list
+      if each.name == name
+        return each
+      end
+    end
+    false
   end
 
 

@@ -66,4 +66,11 @@ describe('Word') do
     end
   end
 
+  describe('.find_by_name') do
+    it('checks that a word found by name is returned correctly') do
+      expect(Word.find_by_name("strong")).to(eq(@dummy))
+      expect(Word.find_by_name("robust")).to(eq(@dummy2))
+    end
+  end
+
 end
