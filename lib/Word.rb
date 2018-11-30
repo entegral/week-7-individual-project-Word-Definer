@@ -1,5 +1,6 @@
 class Word
   attr_reader :id, :name, :definitions
+  attr_accessor :image_link
   @@word_list = []
 
   def initialize(attributes)

@@ -3,7 +3,7 @@ require 'sinatra/reloader'
 also_reload './lib/**/*.rb'
 require './lib/Word'
 require 'pry'
-
+require 'facets'
 
 get '/' do
   @list = Word.all
@@ -26,7 +26,14 @@ end
 post '/word/:id' do
   @list = Word.all
   word = Word.find(params['id'])
-  word.add_definition(params)
+
+  unless params['definition'] == ""
+    word.add_definition(params)
+  end
+
+  unless params['image_link'] == ""
+    word.image_link = params['image_link']
+  end
   @word = Word.find(params['id'])
   erb(:index)
 end

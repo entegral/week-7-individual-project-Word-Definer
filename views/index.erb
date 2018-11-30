@@ -28,7 +28,7 @@
           <h5 class="card-title">Current Word List</h5>
           <p class="card-text">
             <% @list.each do |each| %>
-              <a href="/word/<%= each.id %>"> <p><%= each.name %></a></p>
+              <a href="/word/<%= each.id %>"> <p><%= each.name.titlecase %></a></p>
             <% end %>
           </p>
         </div>
@@ -41,8 +41,12 @@
 
     <div class="col-6">
       <div class="card">
+        <% unless @word.image_link == nil %>
+          <img class="card-img-top" src="<%= @word.image_link %>" alt="Card image cap">
+        <% end %>
+
         <div class="card-body">
-          <h5 class="card-title"><%= @word.name %></h5>
+          <h5 class="card-title"><%= @word.name.titlecase %></h5>
           <h6 class="card-subtitle mb-2 text-muted">Definitions</h6>
           <p class="card-text">
             <ul>
@@ -54,6 +58,9 @@
           <form action="/word/<%= @word.id %>" method="post">
             <div class="form-group">
               <input type="text" class="form-control" name="definition" placeholder="Add Definition">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="image_link" placeholder="(Optional) Copy/Paste Image URL here">
             </div>
             <button type="submit" class="btn btn-primary" name="button">Add Definition to Word</button>
           </form>        </div>
