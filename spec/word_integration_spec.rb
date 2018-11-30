@@ -29,7 +29,6 @@ describe('Word', {:type => :feature}) do
       visit('/word/1')
       fill_in('add_definition', :with => 'prove new def is added to word')
       click_button('Add Definition to Word')
-      visit('/word/1')
       expect(page).to have_content('prove new def is added to word')
     end
   end
