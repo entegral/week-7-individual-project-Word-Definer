@@ -1,20 +1,23 @@
+
 <div class="row">
-  <h2>Definer Word List</h2>
   <% if @list.kind_of?(Array) %>
+  <h2>Definer Word List</h2>
     <% @list.each do |each| %>
       <a href="/word/<%= each.id %>"> <p><%= each.name %></a></p>
     <% end %>
   <% else %>
-    <p><%= @list.name %>
-
+  <div class="row">
+    <br>
+    <a href="/"><< Return to Word List</a>
+  </div>
+    <h2><%= @list.name %></h2>
+    <ul>
       <li>Definitions:<ul>
         <% @list.definitions.each do |i| %>
           <li><%= i %></li>
         <% end %>
       </ul></li>
-
-    </p>
-    <a href="/">Return Home</a>
+    </ul>
   <% end %>
 </div>
 
