@@ -16,7 +16,19 @@
           <button type="submit" class="btn btn-primary" name="button">Add Word to List</button>
         </form>
       </div>
-    </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <h5 class="card-subtitle">Current Word List</h5>
+          <br>
+          <form action="/search" method="get">
+            <div class="form-group">
+              <input class="form-control" type="text" name="search" placeholder="Search List">
+            </div>
+            <button type="submit" class="btn btn-primary" name="button">Search List</button>
+          </form>
+        </li>
+      </ul>
+      </div>
   </div>
 
   <% if @list.length > 0 %>
@@ -37,16 +49,9 @@
         </div>
 
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-            <form action="/search" method="get">
-              <div class="form-group">
-                <input class="form-control" type="text" name="search" placeholder="Search List">
-              </div>
-              <button type="submit" class="btn btn-primary" name="button">Search List</button>
-            </form>
-          </li>
-          <li class="list-group-item"><a class="btn btn-primary" href="/sort_id">Sort by Order Added</a></li>
           <li class="list-group-item"><a class="btn btn-primary" href="/sort_alphabetically">Sort Alphabetically</a></li>
+          <li class="list-group-item"><a class="btn btn-primary" href="/sort_id">Sort by Order Added</a></li>
+          <li class="list-group-item"><a class="btn btn-primary" href="/view_all">View All Definitions</a></li>
         </ul>
 
       </div>

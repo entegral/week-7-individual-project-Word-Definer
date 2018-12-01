@@ -31,6 +31,11 @@ get '/search' do
   erb(:index)
 end
 
+get '/view_all' do
+  @list = Word.all
+  erb(:view_all)
+end
+
 post '/' do
   word = Word.new(params)
   word.save

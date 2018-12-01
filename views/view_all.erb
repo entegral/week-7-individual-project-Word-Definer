@@ -33,36 +33,39 @@
 
   <% if @list.length > 0 %>
 
-    <div class="col-3">
+    <div class="col-9">
       <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Current Word List</h5>
-          <p class="card-text">
-            <% @list.each do |each| %>
-              <a href="/word/<%= each.id %>">
-                <p><%= each.name.titlecase %></a>
-              </p>
-            <% end %>
-          </p>
-        </div>
-
+        <a class="btn btn-primary" href="/"><< Back to Individual List View</a>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item"><a class="btn btn-primary" href="/sort_id">Sort by Order Added</a></li>
-          <li class="list-group-item"><a class="btn btn-primary" href="/sort_alphabetically">Sort Alphabetically</a></li>
+
+          <% for each in @list %>
+
+            <li class="list-group-item">
+              <div class="card-body">
+                <h5 class="card-title"><%= each.name.titlecase %></h5>
+                <h6 class="card-subtitle mb-2 text-muted">Definitions</h6>
+                <p class="card-text">
+                  <ul>
+                    <% each.definitions.each do |i| %>
+                    <li><%= i %></li>
+                    <% end %>
+                  </ul>
+                </p>
+                <form action="/word/<%= each.id %>" method="post">
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="add_definition" placeholder="Add Definition">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="image_link" placeholder="(Optional) Copy/Paste Image URL here">
+                  </div>
+                  <button type="submit" class="btn btn-primary" name="button">Update Word</button>
+                </form>
+              </div>
+            </li>
+          <% end %>
         </ul>
 
       </div>
     </div>
 
-
-    <div class="col-6">
-      <div class="card">
-
-        <div class="card-body">
-          <h5 class="card-title"><%= @search_word%> Not Found</h5>
-
-        </div>
-      </div>
-    </div>
-
-    <% end %>
+  <% end %>
