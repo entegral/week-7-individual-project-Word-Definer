@@ -31,6 +31,11 @@ get '/search' do
   erb(:index)
 end
 
+get '/random' do
+  random_num = 1 + rand(Word.all.length)
+  redirect "/word/#{random_num}"
+end
+
 get '/view_all' do
   @list = Word.all
   erb(:view_all)
