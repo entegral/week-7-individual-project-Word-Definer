@@ -4,7 +4,7 @@ class Word
   @@word_list = []
 
   def initialize(attributes)
-    @name = attributes[:name]
+    @name = attributes[:name].downcase
     @definitions = []
     add_definition(attributes)
     @id = @@word_list.length + 1
@@ -50,7 +50,7 @@ class Word
 
 
   def add_definition(attributes)
-    unless attributes[:definition] == nil
+    unless (attributes[:definition] == nil) || (attributes[:definition] == "")
       @definitions.push(attributes[:definition])
     end
     unless attributes[:add_definition] == nil
