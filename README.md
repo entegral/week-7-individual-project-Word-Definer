@@ -43,7 +43,7 @@ _This application focuses on using a Word class. The homepage of this app displa
 - [x] Allow kids to search for a particular Word in your application.
 - [x] Search feature returns error page if search result is not in the list.
 - [x] Include a page where kids can view all Words and their corresponding Definitions in one list.
-- [ ] Include a randomizer method where kids can click a button and randomly look at a Word
+- [x] Include a randomizer method where kids can click a button and randomly look at a Word
 
 ## Technologies Used
 _GitHub, Ruby_
