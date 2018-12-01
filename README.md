@@ -22,7 +22,7 @@ _This application focuses on using a Word class. The homepage of this app displa
 - [x] Sinatra application uses views, instance variables and forms.
 - [x] Sinatra routes process GET and POST requests/responses.
 - [x] Project includes thorough and passing integration specs.
-- [ ] Application is deployed to Heroku (Include the link in your README).
+- [x] Application is deployed to Heroku (Include the link in your README).
 - [x] Project demonstrates a thorough understanding of this weeks concepts. If prompted, you can discuss your with an instructor using correct terminology.
 - [x] Project is in a polished, portfolio-quality state.
 - [x] Required functionality was present by the end of class on Friday
