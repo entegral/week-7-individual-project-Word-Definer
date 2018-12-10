@@ -8,6 +8,12 @@ _This application focuses on using a Word class. The homepage of this app displa
 
 ## Setup/Installation Requirements
 
+### Easy Method
+
+* Go to this [link](https://fierce-bayou-82323.herokuapp.com/)
+
+### Hard Method
+
 * _Log in to GitHub_
 * _Clone GitHub URL in terminal_
 * _Run Bundler to install necessary gems_
